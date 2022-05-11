@@ -61,9 +61,9 @@ function Board(){
     })
     return (
         <div>
-            {!winner && <p style={{"color" : "blueviolet", "textAlign" : "center"}}>Hey {currentPlayer}, it`s your turn</p>}
-            {winner && winner !== "BOTH" && <p style={{"color" : "blueviolet", "textAlign" : "center"}}>Congratulations.. <br /> {winner} you are winner</p>}
-            {winner && winner === "BOTH" && <p style={{"color" : "blueviolet", "textAlign" : "center"}}>Congratulations.. <br /> you are both winners</p>}
+            {!winner && <p className="msg" style={{"color" : "blueviolet", "textAlign" : "center"}}>Hey {currentPlayer}, it`s your turn</p>}
+            {winner && winner !== "BOTH" && <div className="msg" style={{"color" : "blueviolet", "textAlign" : "center"}}>Congratulations.. <br /> {winner} you are winner <br /></div>}
+            {winner && winner === "BOTH" && <div className="msg" style={{"color" : "blueviolet", "textAlign" : "center"}}>Congratulations.. <br /> you are both winners <br /></div>}
             <div className="grid">
                 {Array(9)
                     .fill(null)
